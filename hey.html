@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiteboard Interview — Question Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hey2.css">
+</head>
+<body>
+  <div class="board">
+    <header>
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect x="4" y="4" width="26" height="20" rx="2" stroke="#232323" stroke-width="2"/>
+        <path d="M9 26 L13 30 L17 26" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 11 L15 11" stroke="#2b5ea8" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 16 L23 16" stroke="#c14343" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 21 L19 21" stroke="#2f8f5b" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h1>Whiteboard Interview</h1>
+    </header>
+    <p class="tagline">Set the role, topic, and difficulty. We'll sketch out fresh interview questions on the board — no two sessions the same.</p>
+
+    <div class="panel">
+      <div class="fields">
+        <div class="field">
+          <label for="role">Role</label>
+          <select id="role">
+            <option>Software Developer</option>
+            <option>QA</option>
+            <option>DevOps</option>
+            <option>Frontend</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option>Easy</option>
+            <option selected>Medium</option>
+            <option>Hard</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic">
+            <option>DSA</option>
+            <option>DBMS</option>
+            <option>OOP</option>
+            <option>OS</option>
+            <option>CN</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="count">Number of questions</label>
+          <select id="count">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="generate-row">
+        <span id="status-msg"></span>
+        <button id="generateBtn" type="button">Draw up questions →</button>
+      </div>
+    </div>
+
+    <section class="results" id="results">
+      <div class="empty-state">Nothing on the board yet. Pick your criteria above and hit "Draw up questions."</div>
+    </section>
+
+    <footer class="actions" id="actionsFooter" style="display:none;">
+      <button class="eraser" id="eraseBtn" type="button">Wipe board clean</button>
+    </footer>
+  </div>
+
+  <script src="hey4.js"></script>
+  <script src="hey3.js"></script>
+</body>
+</html>
